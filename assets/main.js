@@ -213,8 +213,8 @@ function nextstage(newMoney,headless = true){
 window.setInterval(update,200)
 function update(){
   //UPDATE MONEY
-  moneydisplay.innerText = '$' + player.money / 100;
-  moneydisplayshop.innerText = '$' + player.money / 100;
+  moneydisplay.innerText = '💸' + player.money / 100;
+  moneydisplayshop.innerText = '💸' + player.money / 100;
   clicks.innerText = customers
   //UNLOCK UPGRADE AS ITEM ARE BOUGHT AND TUTORIAL
 	if(player.money > 99 && rev_tut3 == true){
@@ -730,7 +730,7 @@ function init(){ // Restore Save
   }else{
     closenotify()
     skipTutorial()
-    document.getElementById('lastMoney').innerText = "Money: $" + save.money / 100
+    document.getElementById('lastMoney').innerText = "Money: 💸" + save.money / 100
     document.body.style.overflow = "hidden";
     saveCard.classList.remove('hide')
     fadeIn(saveCard)
@@ -793,7 +793,7 @@ if(window.localStorage.getItem('ch') !== null){
     give = 1000
   }
   player.money += Math.round(give)
-  notify('CoinAGES', 'Your company made $' + Math.round(give)/100 + ' while you were away!')
+  notify('CoinAGES', 'Your company made 💸' + Math.round(give)/100 + ' while you were away!')
   }
 
   if(player.pclickboost !== 0){ // Restore PermBoosts
