@@ -213,8 +213,8 @@ function nextstage(newMoney,headless = true){
 window.setInterval(update,200)
 function update(){
   //UPDATE MONEY
-  moneydisplay.innerText = '💸' + player.money / 100;
-  moneydisplayshop.innerText = '💸' + player.money / 100;
+  moneydisplay.innerText = '' + player.money / 100;
+  moneydisplayshop.innerText = '' + player.money / 100;
   clicks.innerText = customers
   //UNLOCK UPGRADE AS ITEM ARE BOUGHT AND TUTORIAL
 	if(player.money > 99 && rev_tut3 == true){
