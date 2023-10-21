@@ -101,7 +101,7 @@ var investigationdone = new Howl({
   src: ['../assets/audio/investigationdone.mp3']
 });
 var soundtrack = new Howl({
-  src: ['../assets/audio/soundtrack.mp3'],
+  src: ['../assets/audio/tunog.mp3'],
   loop: true,
   volume: 0.125
 });
