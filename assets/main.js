@@ -677,15 +677,8 @@ function end(){
   back()
   document.getElementById('locationchoose').classList.add('hide')
   createAlert("Investigation!", "The government has uncovered your plans to buy out your rival corporations and has looked over recent business practices that give you an unfair advantage over other potential business. The goverment demands that CoinAGES be dissolved <br><br> <button id='alertBtn'onclick='destroyAlert()' class='reg respond'>OK</button>", alertImages.usoaFlag, true)
-  createAlert("Investigation!", "The fine/bail for a crime on such a scale is $" + player.money/100 + ". The decision is yours to make. Pay up and..<br><br> <button id='alertBtn'onclick='retire()' style='width:auto;' class='reg'>Retire (Ends Game but keeps save)</button><br><button id='alertBtn'onclick='rebirth()' style='width:auto;' class='reg respond'>Rebirth The Company (+1000 Boost)</button><br><br>", alertImages.usoaFlag, false);
+  createAlert("Investigation!", "The fine/bail for a crime on such a scale is $" + player.money/100 + ". The decision is yours to make. Pay up and..<br><br> <button id='alertBtn'onclick='retire()' style='width:auto;' class='reg'>Retire (Ends Game but keeps save)</button><br><br><br>", alertImages.usoaFlag, false);
 
-}
-function rebirth(){
-  window.localStorage.clear()
-  window.localStorage.setItem('p', '{"money":0,"clickboost":0,"pclickboost":1000,"clickvalue":0.01,"icon":"../assets/img/1.png","purchasedCampaigns":[],"endStage":false,"end":false}')
-  window.localStorage.setItem('c', 0)
-  window.localStorage.setItem('v', '{"Zamazon":{"value":250000,"futurevalue":0,"change":"+"},"Sicromoft":{"value":200000,"futurevalue":0,"change":"+"},"Coinhype":{"value":100000,"futurevalue":0,"change":"-"},"Randomize":{"value":80000,"futurevalue":0,"change":"+"},"FlippyOnline":{"value":10000,"futurevalue":0,"change":"+"},"LuxFlip":{"value":1000,"futurevalue":0,"change":"-"},"CoinAGES":{"value":0,"futurevalue":0,"change":"+"}}')
-  window.location.reload()
 }
 function retire(){
   window.location.href='../../retire/?m=' + Base64.encode(player.money.toString()) + "&c=" + Base64.encode(customers.toString());
